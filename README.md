@@ -1,30 +1,90 @@
-# React + TypeScript + Vite
+# Mohanram Shanmugam - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official portfolio website for Mohanram Shanmugam, designed to showcase UI/UX design projects and related content.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a personal portfolio website for Mohanram Shanmugam, built with modern web development technologies. The website includes various sections to display design works, an About section, contact information, and more.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Bundler:** ViteJS
+- **JS Framework/Library:** ReactJS
+- **Routing:** React Router
+- **Styling:** TailwindCSS
+- **TypeScript:** Yes
+- **Code Formatting:** Prettier
+- **Git Hooks:** Husky
+- **Commit Guidelines:** Conventional Commit
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Follow these steps to get the project up and running on your local machine.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Prerequisites
+
+Ensure you have the following installed on your system:
+
+- Node.js (>= 14.x)
+- Yarn (>= 1.x)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/HeyProtagonist/mohanram-portfolio.git
+   cd mohanram-portfolio
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   yarn install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   yarn dev
+   ```
+
+   This will start the development server and you can view the website at `http://localhost:3000`.
+
+## Scripts
+
+Here are some useful scripts you can run:
+
+- **Start the development server:**
+
+  ```bash
+  yarn dev
+  ```
+
+- **Build the project for production:**
+
+  ```bash
+  yarn build
+  ```
+
+- **Preview the production build:**
+
+  ```bash
+  yarn preview
+  ```
+
+- **Lint the codebase:**
+
+  ```bash
+  yarn lint
+  ```
+
+- **Format the codebase:**
+
+  ```bash
+  yarn format
+  ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
