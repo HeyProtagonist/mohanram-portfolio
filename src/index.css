@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,4 +10,50 @@
   html {
     font-family: "Libre Baskerville", "League Spartan", system-ui, sans-serif;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Scrollbar styles for webkit browsers (Chrome, Safari) */
+#projects-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+#projects-container::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+}
+
+#projects-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Change the color if needed */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+#projects-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change the color if needed */
+}
+
+/* Scrollbar styles for Firefox */
+#projects-container {
+  /* scrollbar-width: thin; */
+  scrollbar-color: #888 var(--scrollbar-track-bg);
+}
+
+/* Light and dark mode specific styles */
+#projects-container.light-mode {
+  --scrollbar-track-bg: #f1f1f1;
+}
+
+#projects-container.dark-mode {
+  --scrollbar-track-bg: #333;
 }

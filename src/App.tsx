@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import * as React from "react";
 import {
   faLinkedin,
@@ -60,7 +61,10 @@ function App() {
   }, [location]);
 
   return (
-    <div id="wrapper" className="dark:bg-gray-900 dark:text-gray-100">
+    <div
+      id="wrapper"
+      className="dark:bg-gray-900 dark:text-gray-100 overflow-hidden"
+    >
       <div id="container" className="w-screen h-screen flex">
         <div
           id="header"
@@ -74,9 +78,9 @@ function App() {
             id="social-links"
             className="w-full h-52 flex flex-col justify-evenly items-center"
           >
-            {socialLinks.map(({ id, icon, url }) => {
+            {socialLinks.map(({ icon, url }) => {
               return (
-                <Link key={id} to={url} target="_blank">
+                <Link key={uuidv4()} to={url} target="_blank">
                   <FontAwesomeIcon
                     icon={icon}
                     size="xl"
@@ -92,9 +96,9 @@ function App() {
           id="navigation"
           className="min-w-[20rem] h-16 absolute top-0 left-[4.8rem] flex flex-row justify-evenly items-center"
         >
-          {navigationList.map(({ id, pathname, name }) => {
+          {navigationList.map(({ pathname, name }) => {
             return (
-              <div key={id} className="h-full">
+              <div key={uuidv4()} className="h-full">
                 <div
                   id="pointless-designer-strip"
                   className={`relative top-0 w-full h-[10%] bg-[#39AD48] ${activePage === pathname ? "visible" : "invisible"}`}

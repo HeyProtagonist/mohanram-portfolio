@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import DisplayPicture from "../../assets/image.png";
@@ -99,10 +100,10 @@ function Home() {
           id="section-two"
           className="h-[20%] flex justify-start items-center gap-[4rem] pl-10 font-LeagueSpartan"
         >
-          {contactList.map(({ id, label, displayName, link }) => {
+          {contactList.map(({ label, displayName, link }) => {
             return (
               <div
-                key={id}
+                key={uuidv4()}
                 id="contact"
                 className="border-0 border-l-[1px] border-l-slate-600 pl-5"
               >

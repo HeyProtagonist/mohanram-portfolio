@@ -1,9 +1,9 @@
 import * as React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
 import { ABOUT_ROUTE, HOME_ROUTE, PROJECTS_ROUTE } from "./constants";
 import SomethingWentWrong from "./Pages/Error/SomethingWentWrong";
 
+const App = React.lazy(() => import("./App"));
 const HomePage = React.lazy(() => import("./Pages/Home"));
 const ProjectsPage = React.lazy(() => import("./Pages/Projects"));
 const AboutPage = React.lazy(() => import("./Pages/About"));

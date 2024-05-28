@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import PlayAppThumbnail from "../../assets/project-play-app.png";
+import projectsPayload from "../../Payload/projects-payload";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -26,19 +27,23 @@ function Projects() {
   return (
     <div id="wrapper" className="w-full h-full pt-[6rem] overflow-hidden">
       <motion.ul
-        id="container"
-        className="w-full h-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 px-[4rem] overflow-scroll container"
+        id="projects-container"
+        className="w-full h-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 px-[4rem] overflow-scroll container overflow-x-hidden"
         variants={container}
         initial="hidden"
         animate="visible"
       >
-        {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((index) => {
+        {projectsPayload.map(({ displayName, imagePath, URL }) => {
           return (
-            <motion.li key={index} className="item" variants={item}>
-              <Link to="#" className="bg-white rounded-lg shadow-md">
+            <motion.li key={uuidv4()} className="item" variants={item}>
+              <Link
+                to={URL}
+                className="bg-white rounded-lg shadow-md"
+                target="_blank"
+              >
                 <img
-                  src={PlayAppThumbnail}
-                  alt="Gallery Image 1"
+                  src={imagePath}
+                  alt={displayName}
                   className="rounded-md w-full h-full object-contain object-center"
                 />
               </Link>
